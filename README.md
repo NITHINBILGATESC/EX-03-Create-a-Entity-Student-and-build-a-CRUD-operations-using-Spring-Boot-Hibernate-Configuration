@@ -38,9 +38,11 @@ PUT /students/{id} → Update student
 
 DELETE /students/{id} → Delete student
 
-##PROGRAM CODE
+## PROGRAM CODE
 
 ### pom.xml
+```
+
 <dependencies>
     <!-- Spring Boot Web -->
     <dependency>
@@ -97,7 +99,11 @@ public class Student {
 
     public void setAge(int age) { this.age = age; }
 }
+```
+
 ### StudentRepository.java
+```
+
 package com.example.demo.repository;
 
 import com.example.demo.model.Student;
@@ -105,7 +111,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
 }
+```
+
 ### StudentController.java
+```
+
 package com.example.demo.controller;
 
 import com.example.demo.model.Student;
@@ -153,7 +163,11 @@ public class StudentController {
         return "Student with ID " + id + " deleted successfully!";
     }
 }
+```
+
 ### DemoApplication.java
+```
+
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -165,3 +179,10 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
+```
+### Output:
+<img width="962" height="557" alt="Screenshot 2026-06-07 133721" src="https://github.com/user-attachments/assets/331e389b-beb7-4a0f-9dbb-87474d42eb0d" />
+
+
+
+
